@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المهارة الجاية | Next Skill</title>
+  <meta name="description" content="Pick the skills you have and see which single skill opens the most tech job postings in Saudi Arabia.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1 data-i18n="title"></h1>
+      <p class="lead" data-i18n="lead"></p>
+    </div>
+    <button id="lang" class="ghost" type="button"></button>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2><span class="step">1</span> <span data-i18n="s1"></span></h2>
+      <div class="row">
+        <label>
+          <span data-i18n="track"></span>
+          <select id="track"></select>
+        </label>
+        <label>
+          <span data-i18n="strict"></span>
+          <select id="threshold">
+            <option value="0.5" data-i18n="t50"></option>
+            <option value="0.6" data-i18n="t60" selected></option>
+            <option value="0.8" data-i18n="t80"></option>
+            <option value="1" data-i18n="t100"></option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">2</span> <span data-i18n="s2"></span></h2>
+      <div id="skills" class="chips" role="group"></div>
+      <button id="clear" class="ghost small" type="button" data-i18n="clear"></button>
+    </section>
+
+    <section class="card result" aria-live="polite">
+      <h2><span class="step">3</span> <span data-i18n="s3"></span></h2>
+      <p class="big"><strong id="count">0</strong> <span id="countText"></span></p>
+      <div class="meter"><div id="meterFill"></div></div>
+
+      <h3 data-i18n="nextTitle"></h3>
+      <p class="hint" data-i18n="nextHint"></p>
+      <ol id="next" class="bars"></ol>
+
+      <h3 data-i18n="pathTitle"></h3>
+      <p class="hint" data-i18n="pathHint"></p>
+      <ol id="path" class="path"></ol>
+
+      <h3 data-i18n="tracksTitle"></h3>
+      <table id="tracks"></table>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="about"></p>
+    <p><a href="https://github.com/Majed166/next-skill" data-i18n="code"></a></p>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
